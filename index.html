@@ -4,8 +4,8 @@
   <title>TimeIng</title>
  </head>
 
- <body>
-  <font size=7 color="red"><label id="time"></label>
+ <body bgcolor="black">
+  <font size=7 color="white"><label id="time"></label>
   <script>
     let d1 = new Date('2021-09-30T18:10:00');
     window.setInterval(dispMsg, 1);
@@ -15,7 +15,7 @@
       t = (d1.getTime() - d2.getTime())
       console.log(t);
       if(t>=0){
-          time.innerText = ( '000' + Math.floor(t / 3600000)).slice( -3 ) + ":" + ( '00' + Math.floor(t / 60000 % 60)).slice( -2 ) + ":" + ( '00' + Math.floor(t / 1000 % 60)).slice( -2 ) + "." + ( '000' + (t % 1000)).slice( -3 );
+          time.innerText = "つばめん半周年まであと" + ( '00' + Math.floor(t / 3600000 / 24)).slice( -2 ) + "日"+ ( '00' + Math.floor(t / 3600000 % 24)).slice( -2 ) + ":" + ( '00' + Math.floor(t / 60000 % 60)).slice( -2 ) + ":" + ( '00' + Math.floor(t / 1000 % 60)).slice( -2 ) + "." + ( '000' + (t % 1000)).slice( -3 );
       }
       if(t<0){
         time.innerText = "つばめん半周年おめでとう！"
